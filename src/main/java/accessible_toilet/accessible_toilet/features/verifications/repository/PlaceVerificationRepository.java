@@ -1,6 +1,6 @@
-package accessible_toilet.accessible_toilet.repository;
+package accessible_toilet.accessible_toilet.features.verifications.repository;
 
-import accessible_toilet.accessible_toilet.domain.PlaceVerification;
+import accessible_toilet.accessible_toilet.features.verifications.domain.PlaceVerification;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

@@ -1,6 +1,6 @@
-package accessible_toilet.accessible_toilet.repository;
+package accessible_toilet.accessible_toilet.features.places.repository;
 
-import accessible_toilet.accessible_toilet.domain.Place;
+import accessible_toilet.accessible_toilet.features.places.domain.Place;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

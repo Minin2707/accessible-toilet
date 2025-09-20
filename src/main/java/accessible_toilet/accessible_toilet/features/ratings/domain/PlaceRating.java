@@ -1,5 +1,7 @@
-package accessible_toilet.accessible_toilet.domain;
+package accessible_toilet.accessible_toilet.features.ratings.domain;
 
+import accessible_toilet.accessible_toilet.features.places.domain.Place;
+import accessible_toilet.accessible_toilet.features.users.domain.User;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.Instant;

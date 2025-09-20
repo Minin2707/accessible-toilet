@@ -1,4 +1,4 @@
-package accessible_toilet.accessible_toilet.domain;
+package accessible_toilet.accessible_toilet.features.users.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

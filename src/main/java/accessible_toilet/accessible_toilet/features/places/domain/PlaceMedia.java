@@ -1,4 +1,4 @@
-package accessible_toilet.accessible_toilet.domain;
+package accessible_toilet.accessible_toilet.features.places.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
