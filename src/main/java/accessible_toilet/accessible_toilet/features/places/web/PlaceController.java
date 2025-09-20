@@ -11,6 +11,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
+/**
+ * REST-эндпоинты для работы с местами (создание, поиск рядом, детали).
+ * Временная аутентификация: заголовок X-User-Id (UUID).
+ * Методы:
+ * - create: Создать новое место (статус PENDING). Требуется X-User-Id — автор.
+ * - nearby: Поиск активных мест в радиусе от точки (lat/lon).
+ * - get: Получить подробности по месту.
+ */
 @RestController
 @RequestMapping("/api/places")
 @RequiredArgsConstructor

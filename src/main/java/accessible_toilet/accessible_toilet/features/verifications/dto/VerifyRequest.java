@@ -3,6 +3,9 @@ package accessible_toilet.accessible_toilet.features.verifications.dto;
 import accessible_toilet.accessible_toilet.features.verifications.domain.PlaceVerification;
 import jakarta.validation.constraints.Size;
 
+/**
+ * Запрос на верификацию места (подтвердить/отклонить).
+ */
 public record VerifyRequest(
         PlaceVerification.Decision decision,
         @Size(max = 500)

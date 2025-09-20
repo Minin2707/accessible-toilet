@@ -10,6 +10,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
+/**
+ * Действия над конкретным местом: верификация и оценка.
+ * Требуется X-User-Id — текущий пользователь.
+ * Методы:
+ * - verify: Подтвердить/отклонить место (по одному голосу на пользователя).
+ * - rate: Поставить/обновить оценку месту.
+ */
 @RestController
 @RequestMapping("/api/places/{id}")
 @RequiredArgsConstructor

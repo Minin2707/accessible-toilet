@@ -7,6 +7,17 @@ import lombok.*;
 import java.time.Instant;
 import java.util.UUID;
 
+/**
+ * Оценка места пользователем. Один пользователь может оставить одну оценку,
+ * последующие отправки — обновление.
+ * Поля:
+ * - id: Идентификатор оценки.
+ * - place: Оцениваемое место.
+ * - user: Автор оценки.
+ * - stars: Звезды 1..5.
+ * - comment: Текстовый комментарий (опц.).
+ * - updatedAt: Создание/обновление оценки.
+ */
 @Entity
 @Table(name = "place_ratings",
         uniqueConstraints = @UniqueConstraint(columnNames = {"place_id","user_id"}))

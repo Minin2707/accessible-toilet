@@ -8,6 +8,15 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Доступ к местам и гео-поиск рядом (через PostGIS).
+ * Находит активные места в радиусе от точки и сортирует по дистанции.
+ * lat    широта центра
+ * lon    долгота центра
+ * radiusMeters радиус в метрах
+ * limit  максимальное кол-во результатов
+ * @return список мест
+ */
 public interface PlaceRepository extends JpaRepository<Place, UUID> {
 
     // Быстрый geo-поиск через PostGIS: используем сгенерированную колонку `location`

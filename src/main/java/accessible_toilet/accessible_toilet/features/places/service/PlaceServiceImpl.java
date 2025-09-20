@@ -17,6 +17,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+/**
+ * Реализация PlaceService: сохраняет место, медиа и выполняет гео-поиск.
+ * Методы:
+ * - createPlace: проверяем автора, маппим и сохраняем место, привязываем медиа по s3Key
+ */
 @Service
 @Transactional
 @RequiredArgsConstructor
@@ -32,11 +37,11 @@ public class PlaceServiceImpl implements PlaceService {
         User author = userRepo.findById(authorId)
                 .orElseThrow(() -> new NotFoundException("User not found: " + authorId));
 
-        Place p = mapper.toEntity(req);
-        if (p.getId() == null) p.setId(UUID.randomUUID());
-        p.setAuthor(author);
-        p.setStatus(Place.Status.PENDING);
-        Place saved = placeRepo.save(p);
+        Place place = mapper.toEntity(req);
+        if (place.getId() == null) place.setId(UUID.randomUUID());
+        place.setAuthor(author);
+        place.setStatus(Place.Status.PENDING);
+        Place saved = placeRepo.save(place);
 
         for (String key : req.photoKeys()) {
             PlaceMedia m = new PlaceMedia();

@@ -8,6 +8,14 @@ import jakarta.validation.constraints.Size;
 
 import java.util.List;
 
+/**
+ * Запрос на создание места.
+ * @param title Заголовок места (до 120 символов).
+ * @param description Описание (до 2000 символов).
+ * @param lat Широта -90..90.
+ * @param lon Долгота -180..180.
+ * @param photoKeys Ключи загруженных фото в S3/MinIO.
+ */
 public record CreatePlaceRequest(
         @NotBlank @Size(max = 120)
         String title,

@@ -9,6 +9,14 @@ import org.mapstruct.Mapping;
 
 import java.util.List;
 
+/**
+ * Маппер мест: преобразование между Entity и DTO.
+ * Используется MapStruct (генерирует реализацию на этапе компиляции).
+ * Поля:
+ * - toEntity: Создание сущности места из запроса.
+ * - toDetail: Детальный ответ с подставленными URL медиа.
+ * - toShort: Короткий ответ для списка/карты.
+ */
 @Mapper(componentModel = "spring")
 public interface PlaceMapper {
     Place toEntity(CreatePlaceRequest req);

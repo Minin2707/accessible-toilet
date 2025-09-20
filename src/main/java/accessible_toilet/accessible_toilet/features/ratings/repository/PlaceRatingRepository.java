@@ -5,6 +5,13 @@ import org.springframework.data.jpa.repository.*;
 import org.springframework.data.repository.query.Param;
 import java.util.*;
 
+/**
+ * Репозиторий оценок мест. Позволяет найти оценку пользователя и пересчитать среднюю.
+ * Методы:
+ * - findByPlaceIdAndUserId: Поиск оценки конкретного пользователя по месту.
+ * - avgStars: Среднее количество звёзд по месту.
+ * - countByPlaceId: Кол-во оценок по месту.
+ */
 public interface PlaceRatingRepository extends JpaRepository<PlaceRating, UUID> {
     Optional<PlaceRating> findByPlaceIdAndUserId(UUID placeId, UUID userId);
 

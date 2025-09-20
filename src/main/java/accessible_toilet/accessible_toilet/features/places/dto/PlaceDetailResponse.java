@@ -4,6 +4,10 @@ import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Детальный ответ по месту.
+ * @param photoUrls Готовые URL на фото (будут генерироваться из s3Key).
+ */
 public record PlaceDetailResponse(
         UUID id,
         String title,

@@ -7,6 +7,18 @@ import lombok.*;
 import java.time.Instant;
 import java.util.UUID;
 
+/**
+ * Решение пользователя по месту: подтверждение или отклонение.
+ * По одному решению на пользователя на одно место.
+ * Поля:
+ * - Decision: Тип решения.
+ * - id: Идентификатор решения.
+ * - place: Какое место проверялось.
+ * - reviewer: Кто проверял.
+ * - decision: Принятое решение.
+ * - comment: Комментарий модератора/пользователя (опц.).
+ * - createdAt: Дата создания решения.
+ */
 @Entity
 @Table(name = "place_verifications",
         uniqueConstraints = @UniqueConstraint(columnNames = {"place_id","reviewer_id"}))

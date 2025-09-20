@@ -5,6 +5,16 @@ import lombok.*;
 import java.time.Instant;
 import java.util.UUID;
 
+/**
+ * Медиафайл, привязанный к месту (фото). Храним только ключ в S3/MinIO.
+ * Поля:
+ * - id: Идентификатор медиа.
+ * - place: Ссылка на место.
+ * - s3Key: Ключ файла в бакете (s3Key).
+ * - mime: MIME-тип (опц.).
+ * - width, height: Ширина/высота (опц.).
+ * - createdAt: Время создания записи.
+ */
 @Entity
 @Table(name = "place_media")
 @Getter
