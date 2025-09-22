@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/toilets
+    url: jdbc:postgresql://127.0.0.1:5432/toilets
     username: app
     password: app
   jpa:
@@ -11,7 +11,8 @@ spring:
         format_sql: true
   liquibase:
     enabled: true
-    change-log: classpath:db/changelog/db.changelog-master.yaml
+    change-log: classpath:db/changelog/changelog-master.yaml
+    contexts: local
 
 server:
   port: 8080

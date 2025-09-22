@@ -4,5 +4,23 @@ databaseChangeLog:
       author: you
       changes:
         - sqlFile:
-            path: db/changelog/v1__init.sql
+            path: v1_init.sql
             relativeToChangelogFile: true
+
+  - changeSet:
+      id: v1-1-seed-users
+      author: you
+      context: local                        # сиды только в профиле local
+      changes:
+        - sqlFile:
+            path: v1_1_seed_users.sql
+            relativeToChangelogFile: true
+      rollback:
+        - sql:
+            sql: >
+              DELETE FROM users
+              WHERE id IN (
+                '11111111-1111-1111-1111-111111111111',
+                '22222222-2222-2222-2222-222222222222',
+                '33333333-3333-3333-3333-333333333333'
+              );
