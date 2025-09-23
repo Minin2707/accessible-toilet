@@ -1,8 +1,9 @@
 package accessible_toilet.accessible_toilet.features.uploads.web;
 
+import accessible_toilet.accessible_toilet.features.uploads.app.PresignService;
 import accessible_toilet.accessible_toilet.features.uploads.dto.PresignRequest;
 import accessible_toilet.accessible_toilet.features.uploads.dto.PresignResponse;
-import accessible_toilet.accessible_toilet.storage.PresignService;
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

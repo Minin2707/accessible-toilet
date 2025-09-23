@@ -1,4 +1,4 @@
-package accessible_toilet.accessible_toilet.storage;
+package accessible_toilet.accessible_toilet.features.uploads.infra;
 
 import accessible_toilet.accessible_toilet.config.S3Props;
 import io.minio.BucketExistsArgs;

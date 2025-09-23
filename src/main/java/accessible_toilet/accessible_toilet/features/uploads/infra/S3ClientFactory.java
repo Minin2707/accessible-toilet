@@ -1,11 +1,7 @@
-package accessible_toilet.accessible_toilet.storage;
+package accessible_toilet.accessible_toilet.features.uploads.infra;
 
 import accessible_toilet.accessible_toilet.config.S3Props;
 import io.minio.MinioClient;
-import io.minio.errors.MinioException;
-import io.minio.MakeBucketArgs;
-import io.minio.BucketExistsArgs;
-import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
