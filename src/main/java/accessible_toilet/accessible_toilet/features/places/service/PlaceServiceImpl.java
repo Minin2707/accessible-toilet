@@ -7,8 +7,8 @@ import accessible_toilet.accessible_toilet.features.places.dto.CreatePlaceReques
 import accessible_toilet.accessible_toilet.features.places.dto.PlaceDetailResponse;
 import accessible_toilet.accessible_toilet.features.places.dto.PlaceShortResponse;
 import accessible_toilet.accessible_toilet.features.places.mapper.PlaceMapper;
+import accessible_toilet.accessible_toilet.features.places.port.PlaceRepositoryPort;
 import accessible_toilet.accessible_toilet.features.places.repository.PlaceMediaRepository;
-import accessible_toilet.accessible_toilet.features.places.repository.PlaceRepository;
 import accessible_toilet.accessible_toilet.features.users.domain.User;
 import accessible_toilet.accessible_toilet.features.users.repository.UserRepository;
 import jakarta.transaction.Transactional;
@@ -27,7 +27,7 @@ import java.util.*;
 @RequiredArgsConstructor
 public class PlaceServiceImpl implements PlaceService {
 
-    private final PlaceRepository placeRepo;
+    private final PlaceRepositoryPort placeRepo;
     private final PlaceMediaRepository mediaRepo;
     private final UserRepository userRepo;
     private final PlaceMapper mapper;

@@ -12,7 +12,7 @@ import java.util.UUID;
  * - existsByPlaceIdAndReviewerId: Проверка, голосовал ли уже пользователь за это место.
  * - countByPlaceIdAndDecision: Подсчёт голосов по типу решения.
  */
-public interface PlaceVerificationRepository extends JpaRepository<PlaceVerification, UUID> {
+public interface PlaceVerificationJpaRepository extends JpaRepository<PlaceVerification, UUID> {
     boolean existsByPlaceIdAndReviewerId(UUID placeId, UUID reviewerId);
     long countByPlaceIdAndDecision(UUID placeId, PlaceVerification.Decision decision);
 }
