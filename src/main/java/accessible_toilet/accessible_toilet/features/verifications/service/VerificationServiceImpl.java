@@ -3,12 +3,12 @@ package accessible_toilet.accessible_toilet.features.verifications.service;
 import accessible_toilet.accessible_toilet.common.exception.BadRequestException;
 import accessible_toilet.accessible_toilet.common.exception.NotFoundException;
 import accessible_toilet.accessible_toilet.features.places.domain.Place;
-import accessible_toilet.accessible_toilet.features.places.repository.PlaceRepository;
+import accessible_toilet.accessible_toilet.features.places.port.PlaceRepositoryPort;
 import accessible_toilet.accessible_toilet.features.users.domain.User;
 import accessible_toilet.accessible_toilet.features.users.repository.UserRepository;
 import accessible_toilet.accessible_toilet.features.verifications.domain.PlaceVerification;
 import accessible_toilet.accessible_toilet.features.verifications.dto.VerifyRequest;
-import accessible_toilet.accessible_toilet.features.verifications.repository.PlaceVerificationRepository;
+import accessible_toilet.accessible_toilet.features.verifications.port.VerificationPort;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,8 +20,8 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class VerificationServiceImpl implements VerificationService {
 
-    private final PlaceRepository placeRepo;
-    private final PlaceVerificationRepository verRepo;
+    private final PlaceRepositoryPort placeRepo;
+    private final VerificationPort verRepo;
     private final UserRepository userRepo;
 
     @Override

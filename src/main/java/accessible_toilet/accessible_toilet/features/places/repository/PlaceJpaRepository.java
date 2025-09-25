@@ -17,7 +17,7 @@ import java.util.UUID;
  * limit  максимальное кол-во результатов
  * @return список мест
  */
-public interface PlaceRepository extends JpaRepository<Place, UUID> {
+public interface PlaceJpaRepository extends JpaRepository<Place, UUID> {
 
     // Быстрый geo-поиск через PostGIS: используем сгенерированную колонку `location`
     @Query(value = """

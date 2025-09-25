@@ -2,10 +2,10 @@ package accessible_toilet.accessible_toilet.features.ratings.service;
 
 import accessible_toilet.accessible_toilet.common.exception.NotFoundException;
 import accessible_toilet.accessible_toilet.features.places.domain.Place;
-import accessible_toilet.accessible_toilet.features.places.repository.PlaceRepository;
+import accessible_toilet.accessible_toilet.features.places.port.PlaceRepositoryPort;
 import accessible_toilet.accessible_toilet.features.ratings.domain.PlaceRating;
 import accessible_toilet.accessible_toilet.features.ratings.dto.RateRequest;
-import accessible_toilet.accessible_toilet.features.ratings.repository.PlaceRatingRepository;
+import accessible_toilet.accessible_toilet.features.ratings.port.RatingPort;
 import accessible_toilet.accessible_toilet.features.users.domain.User;
 import accessible_toilet.accessible_toilet.features.users.repository.UserRepository;
 import jakarta.transaction.Transactional;
@@ -19,8 +19,8 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class RatingServiceImpl implements RatingService {
 
-    private final PlaceRepository placeRepo;
-    private final PlaceRatingRepository ratingRepo;
+    private final PlaceRepositoryPort placeRepo;
+    private final RatingPort ratingRepo;
     private final UserRepository userRepo;
 
     @Override

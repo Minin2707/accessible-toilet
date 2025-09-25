@@ -12,7 +12,7 @@ import java.util.*;
  * - avgStars: Среднее количество звёзд по месту.
  * - countByPlaceId: Кол-во оценок по месту.
  */
-public interface PlaceRatingRepository extends JpaRepository<PlaceRating, UUID> {
+public interface PlaceRatingJpaRepository extends JpaRepository<PlaceRating, UUID> {
     Optional<PlaceRating> findByPlaceIdAndUserId(UUID placeId, UUID userId);
 
     @Query("select coalesce(avg(r.stars),0) from PlaceRating r where r.place.id = :placeId")
